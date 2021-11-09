@@ -12,30 +12,34 @@
 <body>
     <div class="main">
         <div class="custom">
-            <input type="text" value="" name="heading" id="heading" placeholder="Enter the name of the event to be displayed as heading"/>
+            <h1>Countdown Timer</h1>
+            <input type="text" value="" name="heading" id="heading" placeholder="Enter the event"/>
             <input type="date" name="date" id="date">
             <button id="btn">Start countdown</button>
         </div>
-        <div class="head hidden">
-            <h1>Time left for <span id="text"></span></h1>
-        </div>
+
         <div class="container hidden">
-            <div class="block">
-                <h2 id="day"></h2>
-                <span>Days</span>
+            <div class="head">
+                <h1>Time left for <span id="text"></span></h1>
             </div>
-            <div class="block">
-                <h2 id="hour"></h2>
-                <span>hours</span>
-            </div>
-            <div class="block">
-                <h2 id="minute"></h2>
-                <span>minutes</span>
-            </div>
-            <div class="block">
-                <h2 id="second"></h2>
-                <span>seconds</span>
-            </div>
+            <div class="content">
+                <div class="block">
+                    <h2 id="day"></h2>
+                    <span>Days</span>
+                </div>
+                <div class="block">
+                    <h2 id="hour"></h2>
+                    <span>hours</span>
+                </div>
+                <div class="block">
+                    <h2 id="minute"></h2>
+                    <span>minutes</span>
+                </div>
+                <div class="block">
+                    <h2 id="second"></h2>
+                    <span>seconds</span>
+                </div>
+            </div>  
         </div>
     </div>
 

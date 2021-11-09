@@ -5,7 +5,6 @@ const finalminute = document.getElementById("minute");
 const finalsecond = document.getElementById("second");
 
 const container = document.querySelector(".container");
-const head = document.querySelector(".head");
 const custom = document.querySelector(".custom");
 
 const btn = document.getElementById("btn");
@@ -17,7 +16,6 @@ const text = document.getElementById("text");
 btn.addEventListener("click", () => {
     text.innerHTML = heading.value;
     container.classList.remove("hidden");
-    head.classList.remove("hidden");
     custom.classList.add("hidden");
 });
 
