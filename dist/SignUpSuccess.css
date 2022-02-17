@@ -1,0 +1,175 @@
+*{
+    margin: 0;
+    padding: 0;
+   box-sizing: border-box;
+   font-family: 'Poppins';
+
+   }
+
+   body {
+    max-width: 100vw;
+    max-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.SignUpPage {
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-content: center;
+    flex-wrap: wrap;
+    align-items: center;
+}
+
+.SignUpHead {
+    /* margin-right: -100px; */
+    margin-right: 220px;;
+    display: block;
+    width: 50%;
+    height: 15%;
+    /* margin: auto; */
+    /* margin-left: 400px; */
+}
+
+.SignUpSteps {
+    display: flex;
+    justify-content: center;
+    /* margin: auto; */
+    align-items: center;
+    align-content: center;
+    /* margin-right: 150px; */
+}
+
+.succ-content {
+    width: inherit;
+    display: flex;
+    /* margin-left: 180px; */
+    justify-content: center;
+    border-radius: nullpx;
+    font-family: Poppins;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 13px;
+    line-height: 19px;
+    color: #333333;
+    margin: auto;
+}
+
+#outlook {
+    /* margin-left: 270px; */
+    margin-top: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 39px;
+    width: 200px;
+    border-radius: 1px;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 21px;
+    background-color: #FFFFFF;
+    border-radius: 1px;
+    color: #4BA950;
+    border: 1px solid #4BA950;
+}
+   .Details-03g{
+   height: 45px;
+   width: 55px;
+   }
+   .Details-02 span{
+    display: flex;
+    height: 15px;
+    width: 55px;
+    font-family: Poppins;
+    font-style: normal;
+    font-weight: 300;
+    font-size: 10px;
+    line-height: 15px;
+    color: #000000;
+    margin-left: -18px;
+    margin-top: 5px;
+   }
+   .Details-03g span {
+    display: flex;
+    height: 15px;
+   width: 55px;
+   font-family: Poppins;
+   font-style: normal;
+   font-weight: 300;
+   font-size: 10px;
+   line-height: 15px;
+   color: #000000;
+   margin-left: -18px;
+   margin-top: 5px;
+   }
+   /* .succ-content{
+   height: 240px;
+   width: 384px;
+   display: flex;
+   margin-left: 180px;
+   justify-content: center;
+   border-radius: nullpx;
+   font-family: Poppins;
+   font-style: normal;
+   font-weight: normal;
+   font-size: 13px;
+   line-height: 19px;
+   color: #333333;
+   margin-top: 20px;
+   } */
+   /* #outlook{
+   margin-left: 270px;
+   margin-top: 50px;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   height: 39.400001525878906px;
+   width: 200px;
+   border-radius: 1px;
+   font-style: normal;
+   font-weight: 600;
+   font-size: 14px;
+   line-height: 21px;      
+   background-color: #FFFFFF;
+   border-radius: 1px;
+   color:#4BA950;
+   border: 1px solid #4BA950;                                            
+   } */
+   #outlook:hover{
+    background: #4BA950;
+    color: #FFFFFF;
+   border-radius: 1px;
+   }
+   .lines2{
+   margin-bottom: 25px;
+   margin-left: -30px;
+
+   }
+   .lines{
+   margin-bottom: 25px;
+    margin-left: -30px;
+   }
+  .logos{
+   margin-top: 20px;
+   /* margin-left: 278px; */
+    }
+
+    @media only screen and (min-width: 992px){
+        .SignUpHead{
+          margin-right: 118px;
+        }
+      }
+
+      @media only screen and (min-width: 1200px){
+        .SignUpHead{
+          margin-right: 69px;
+        }
+      }

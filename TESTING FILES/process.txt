@@ -1,0 +1,3 @@
+get data
+encrypt it.
+send data

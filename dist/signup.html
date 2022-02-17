@@ -1,0 +1,39 @@
+<!-- Copyright (c) Microsoft Corporation. All rights reserved. Licensed under the MIT License. -->
+<!-- This file shows how to design a first-run page that provides a welcome screen to the user about the features of the add-in. -->
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>SignUp</title>
+    <link href="signup.css" rel="stylesheet" type="text/css" />
+    <link href='https://fonts.googleapis.com/css?family=Poppins' rel='stylesheet'>
+
+    <!-- Office JavaScript API -->
+    <script type="text/javascript" src="https://appsforoffice.microsoft.com/lib/1.1/hosted/office.js"></script>
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js" type="text/javascript"></script> 
+  </head>
+      <body>
+        <div id ="main_Container-signup">
+        <div class="header_text-signup">OMail</div>
+        <div class ="contact_headers-signup">
+        <header >
+         <img width="196px" height="167px" src="./assets/Omail-page.png" alt="omail" title="Omail" />
+        </header>
+        </div>
+       <div class="descreption-signup">
+           OMail guarantees your email privacy from all third parties, including
+       </div>
+       <div id="seconds">
+         <img src="./assets/Voila60sec.png">
+       </div>
+     <div role="button" id="signup" class="ms-Button-label">
+        Create New Account
+     </div>
+     </div>
+    <script src="taskpane.js"></script>
+    <script src="signup.js"></script>
+   </body>
+  </html>

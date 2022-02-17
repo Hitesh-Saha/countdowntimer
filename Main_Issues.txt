@@ -1,0 +1,5 @@
+1. Remove attachment on clicking 'RemoveAttachmentButton' from attachmentName and attachmentArr
+
+2. Outlook Editor cannot read edited content "<strong>Helo</strong>"
+
+3. Mail going in junk mails

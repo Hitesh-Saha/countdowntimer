@@ -1,0 +1,44 @@
+{
+  "name": "office-addin-taskpane-js",
+  "version": "0.0.1",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/OfficeDev/Office-Addin-TaskPane-JS.git"
+  },
+  "license": "MIT",
+  "config": {
+    "app_to_debug": "outlook",
+    "app_type_to_debug": "desktop",
+    "dev_server_port": 3000
+  },
+  "scripts": {
+    "build-dev": "webpack build --mode development",
+    "build-prod": "webpack build --mode production"
+  },
+  "dependencies": {
+    "@supercharge/strings": "^1.21.0",
+    "ajax": "^0.0.4",
+    "base64-arraybuffer": "^1.0.1",
+    "core-js": "^3.9.1",
+    "cors": "^2.8.5",
+    "crypto-js": "^4.1.1",
+    "emoji-picker-element": "^1.8.0",
+    "express": "^4.17.1",
+    "jquery": "^3.6.0",
+    "jszip": "^3.7.1",
+    "node-forge": "^0.10.0",
+    "porter-stemmer": "^0.9.1",
+    "quill-emoji": "^0.2.0",
+    "regenerator-runtime": "^0.13.7",
+    "showdown": "^1.9.1",
+    "underscore": "^1.13.1",
+    "urijs": "^1.19.7",
+    "yarn": "^1.22.11"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.13",
+    "webpack": "^4.46.0",
+    "webpack-cli": "^4.8.0"
+  },
+  "prettier": "office-addin-prettier-config"
+}

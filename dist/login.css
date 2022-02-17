@@ -1,0 +1,135 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins';
+}
+h4{
+  font-size: 10px;
+    color: red;
+    text-align: center;
+    height: 34px;
+    margin-top: -21px;
+    font-weight: normal;
+
+}
+
+input[type=text], input[type=password] {
+  width: 92%;
+  padding: 0.5rem 0.5rem;
+  display: inline-block;
+  border: 0.5px solid #E1E1E1;
+  background: #FAFAFA;
+  box-sizing: border-box;
+  font-weight: 300;
+  font-size: 12px;
+  line-height: 25px;
+  margin-left: 5px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  outline: none;
+font-family: 'Poppins';
+}
+input[type=password] {
+margin-top: 10px;
+}
+b{
+  margin-left: 18px;
+}
+label{
+  font-weight: 500;
+  font-size: 13px;
+  line-height: 19px;
+  color: #333333;
+}
+.Login-Eye{
+  display: flex;
+
+}
+
+button {
+  background-color: white;
+  color:#4BA950 ;
+  /* padding: 0.5rem 0.5rem; */
+  border: none;
+  cursor: pointer;
+  border: 1px solid #4BA950;
+  width: 200px;
+  border-radius: 0.125rem;
+  font-size: 13px;
+  font-weight: 400;
+  line-height: 18px;
+  height: 34px;
+  margin-left: 47px;
+  margin-top: 34px;
+}
+.eye_svg{
+  margin-left: -35px;
+  height: 25px;
+  width: 25px;
+    margin-top: 18px;
+    position: absolute;
+}
+button:hover {
+  color:white;
+  background-color:#4BA950;
+
+}
+
+span.psw {
+  float: right;
+  padding-top: 16px;
+}
+
+.login-form{
+  display: block;
+  margin: 3rem auto;
+  line-height: 4rem;
+  margin-top: 10px;
+}
+
+.form-body{
+  line-height: 2rem;
+  margin-left: 18px;
+  margin-top: 50px;
+}
+
+.model-body{
+  color: #4BA950;
+  text-align: center;
+  font-weight: 600;
+  font-size: 1rem;
+  line-height: 1.875rem;
+  margin-top: 2px;
+}
+.img {
+  display: flex;
+  justify-content: space-around;
+  height: 150px;
+  margin-top: -15px;
+}
+
+.img img{
+  width: 12.25rem;
+  height: 10.438rem;
+}
+
+.model-para{
+  width: 211px;
+    margin-left: 43px;
+  color: black;
+  font-size: 10px;
+  line-height: 18px;
+  text-align: center;
+  font-family: 'Poppins';
+  margin-top: 17.9px;
+}
+
+.model-forgot{
+  color: #4BA950;
+  text-align: center;
+  font-weight: 500;
+  font-size: 13px;
+  line-height: 17px;
+  height: 30px;
+}

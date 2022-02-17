@@ -1,0 +1,25 @@
+*{
+                 margin: 0;    
+                 padding: 0;    
+                 box-sizing: border-box;
+        }
+        .header-omail{
+                         height: 32px;
+                         width: 59px;
+                         font-family: Poppins;
+                         font-style: normal;
+                         font-weight: 600;
+                         font-size: 20px;
+                         line-height: 30px;
+                         
+                         color: #4BA950;
+        }
+        .header-create{
+        height: 32px;
+        width: 168px;
+        font-family: Poppins;
+        font-style: normal;
+        font-weight: 600;
+        font-size: 16px;
+        line-height: 24px;
+        }

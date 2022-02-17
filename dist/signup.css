@@ -1,0 +1,107 @@
+/* 
+ * Copyright (c) Microsoft Corporation. All rights reserved. Licensed under the MIT license.
+ * See LICENSE in the project root for license information.
+ */
+
+ html,
+ body {
+     width: 100%;
+     height: 100%;
+     margin: 0;
+     padding: 0;    
+     font-family: 'Poppins';
+ 
+ }
+ .main_container-signup{
+     display: flex;
+ }
+ .header_text-signup{    
+    font-family: Poppins;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 20px;
+    line-height: 30px;
+    color: #4BA950;
+    text-align: center;
+ }
+ .descreption-signup{
+    Width:224px;
+    Height :36px;
+font-family: Poppins;
+font-style: normal;
+font-weight: normal;
+font-size: 10px;
+line-height: 18px;
+text-align: center;
+color: #333333;
+margin-left: 41px;
+}
+
+ .contact_headers-signup{
+     margin-left: 69px;
+ }
+ 
+ #signup{
+    margin-top: 100px;
+    margin-left:11px;
+    width: 216px;
+    height: 34px;
+    background: #FFFFFF;
+    border: 1px solid #4BA950;
+    box-sizing: border-box;
+    border-radius: 2px;
+    color:#4BA950;
+    cursor: pointer;
+    padding-top:0.4rem ;
+    margin-left: 49px;
+    margin-top: 47px;
+ }
+ #signup {
+     text-decoration: none;
+     color:#4BA950;
+ }
+.ms-Button-label{
+    font-family: Poppins;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 11px;
+    line-height: 15px;
+    padding-left:3.7rem;
+    color: #4BA950;
+}
+#signup:hover{
+    background-color: #4BA950;
+    color:#FFFFFF;
+}
+#seconds{
+height: fit-content;
+width: fit-content;
+margin-top: 38px;
+margin-left: 31px;
+
+}
+
+.loader {
+    border: 16px solid #f3f3f3; /* Light grey */
+    border-top: 16px solid #09a136; /* Blue */
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    animation: spin 2s linear infinite;
+    /* margin-top: 200px;
+    margin-left: 100px; */
+
+  }
+  .loader-main{
+      height: 100%;
+      width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+
+  @keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+  }

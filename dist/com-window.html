@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+
+    <!-- Graph SDK -->
+    <script src="https://cdn.jsdelivr.net/npm/@microsoft/microsoft-graph-client/lib/graph-js-sdk.js"></script>
+    <!-- polyfilling promise -->
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/es6-promise/dist/es6-promise.auto.min.js"></script>
+    <!-- polyfilling fetch -->
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/whatwg-fetch/dist/fetch.umd.min.js"></script>
+    <!-- depending on your browser you might wanna include babel polyfill -->
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@babel/polyfill@7.4.4/dist/polyfill.min.js"></script>
+
+    <!-- Office JavaScript API -->
+    
+    <script type="text/javascript" src="https://appsforoffice.microsoft.com/lib/1.1/hosted/office.js"></script>
+   
+    <!-- For more information on Fluent UI, visit https://developer.microsoft.com/fluentui. -->
+    <link rel="stylesheet"
+        href="https://static2.sharepointonline.com/files/fabric/office-ui-fabric-core/9.6.1/css/fabric.min.css" />
+        <link rel="stylesheet" href="rec-window-reply.css">
+        <link href='https://fonts.googleapis.com/css?family=Poppins' rel='stylesheet'>
+
+
+    <!-- <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous"> -->
+    <title>OMail</title>
+    <link rel="stylesheet"
+        href=" https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/monokai-sublime.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.7.1/katex.min.css">
+    <link rel="stylesheet" href="https://cdn.quilljs.com/1.3.6/quill.bubble.css">
+    <link rel="stylesheet" href=" https://cdn.quilljs.com/1.3.6/quill.snow.css">
+    <link rel="stylesheet" href="https://cdn.quilljs.com/1.3.6/quill.core.css">
+    <link rel="stylesheet" href="com-window.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.2/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.7.1/katex.min.js"></script>
+    <script src="https://cdn.quilljs.com/1.3.6/quill.js"></script>
+    <!-- <script src="https://unpkg.com/@material-ui/core@latest/umd/material-ui.development.js" crossorigin="anonymous"></script> -->
+    <script src="https://unpkg.com/babel-standalone@latest/babel.min.js" crossorigin="anonymous"></script>
+    <!-- Fonts to support Material Design -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap" />
+    <!-- Icons to support Material Design -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/semantic-ui@2.4.2/dist/semantic.min.css"> <!-- for dropdown -->
+    <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script> -->
+    <script src="https://cdn.jsdelivr.net/npm/semantic-ui@2.4.2/dist/semantic.min.js"></script> <!--dropdown -->
+    <!---Emoji library-->
+    <!-- <link href="https://cdn.quilljs.com/1.3.5/quill.snow.css" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="/src/emoji-dist/quill-emoji.css">
+    <script src="https://cdn.quilljs.com/1.3.5/quill.js"></script>
+    <script src="/src/emoji-dist/quill-emoji.js"></script> -->
+
+
+   
+    
+</head>
+
+<body>
+    <div id="overlay">
+        <div class="animation">
+         <svg class="plane" height="120" width="200">
+            <polyline points="160,20 40,60 150,80 160,20 88,68 88,95 110,73" />
+          </svg>
+          
+           <svg class="animation-mail" height="120" width="200">
+            <polyline points="20,20 180,20 180,100 20,100 20,20 100,70 180,20" />
+          </svg> 
+        </div>
+                <div id="text">Sending...</div>
+
+    </div>
+
+    <div class="mail-container">
+        <!--Mail from-->
+        <div class="mail-from mail-attribute">
+            <div class="mail-from-wrapper">
+                <div class="mail-from-label">
+                     <a>From</a>
+                </div>
+                <div class="mail-from-user">
+                    <div class="from-id"></div>
+                </div>
+                <div class="mail-cc-bcc-btn-wrapper">
+                    <button id="mail-cc-btn" class="mail-cc-bcc-btn">
+                        Cc
+                    </button>
+                    <button id="mail-bcc-btn" class="mail-cc-bcc-btn">
+                        Bcc
+                    </button>
+                </div>
+            </div>
+        </div>        
+
+        <!--Mail to-->
+        <div class="mail-to mail-attribute">
+            <div class="mail-to-label mail-label">
+                <a>To</a>
+            </div>
+            <!-- <div id="input-To" contenteditable="true">varsha@varsha11.onmicrosoft.com
+            </div> -->
+             <div class="mail-users">
+                <div class="mail-users-input">
+                    <input id="mail-to-input" class="mail-users-input-field" type="email" autocomplete="off">
+                <div id="mail-to-input-dropdown" class="mail-users-input-dropdown mail-users-input-dropdown-disabled">
+                    </div>
+                </div>
+            </div> 
+        </div>
+
+        <!-- Mail -->
+        <div id="mail-cc-container" class="mail-cc mail-attribute mail-cc-disabled">
+            <div class="mail-cc-label mail-label">
+                <a>Cc</a>
+            </div>
+            <div class="mail-users">
+
+                <div class="mail-users-input">
+                    <input id="mail-cc-input" class="mail-users-input-field" type="email" autocomplete="off">
+                 <div id="mail-cc-input-dropdown" class="mail-users-input-dropdown mail-users-input-dropdown-disabled">
+                         
+                    </div>
+                </div>
+            </div>
+        </div>        
+
+        <!--Mail bcc-->
+        <div id="mail-bcc-container" class="mail-bcc mail-attribute mail-bcc-disabled">
+            <div class="mail-bcc-label mail-label">
+                <a>Bcc</a>
+            </div>
+            <div class="mail-users">
+                
+                <div class="mail-users-input">
+                    <input id="mail-bcc-input" class="mail-users-input-field" type="email" autocomplete="off">
+        <div id="mail-bcc-input-dropdown" class="mail-users-input-dropdown mail-users-input-dropdown-disabled">
+                        
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!--Mail subject-->
+        <div class="mail-subject mail-attribute">
+            <input type="text" placeholder="Add a subject" contenteditable="true" id="get-subject" class="mail-subject-input" autocomplete="off"></a>
+        </div>
+
+        <!--Mail attachment-->
+        <div class="mail-attachment mail-attribute">
+            <div class="mail-attachment-wrapper">
+                <!-- <div class="mail-attachment-item">
+                    
+                </div> -->
+            </div>
+        </div>
+
+        <!--Mail body-->
+        <div class="mail-body-container">
+            <div id="quill-injection" class="mail-body-wrapper">
+            </div>
+        </div>
+</div>
+
+    <!--Mail Actions-->
+    <div class="mail-actions-container">
+        <div class="mail-actions-wrapper">
+            <button class="mail-actions-send-button" class="send-btn">Send</button>
+
+            <button class="mail-actions-discard-button">Discard</button>
+
+            <button class="mail-actions-attachment-button">
+                <input type="file"   id="actual-btn" multiple hidden/>
+             <label for="actual-btn"> <img src="./assets/paperclip.png" alt="add_attachment"></label>
+            </button>
+
+            <div id="MsgStatus"></div>
+             <div class="right-options-container">
+                 <div class="constraint__wrapper">
+                     <span class="constraint__label">Passphrase</span>
+                     <label class="constraint__slider" for="constraint-handler">
+                         <input hidden type="checkbox" id="constraint-handler">
+                     </label>
+                     <span class="constraint__label">Shared Key</span>
+                 </div>
+             </div>
+            
+        </div>
+    </div>
+
+    <script src="com-window.js"></script>
+    <!-- <script src="../settings/attachment.js"></script> -->
+    <!-- <script src="./sendAction.js"></script> -->
+    <!-- <script src="./debouncer.js"></script> -->
+    <!-- <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-ygbV9kiqUc6oa4msXn9868pTtWMgiQaeYH7/t7LECLbyPA2x65Kgf80OJFdroafW" crossorigin="anonymous">
+        </script> -->
+</body>
+</html>

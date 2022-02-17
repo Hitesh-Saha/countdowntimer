@@ -1,0 +1,91 @@
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js" type="text/javascript"></script> 
+<script type="text/javascript" src="https://appsforoffice.microsoft.com/lib/1.1/hosted/office.js"></script>
+
+<link rel="stylesheet" href="SignUpDetails.css">
+<link rel="stylesheet" href="SignUpOTP.css">
+
+<link href='https://fonts.googleapis.com/css?family=Poppins' rel='stylesheet'>
+<!-- <link rel="stylesheet" href="SignUpOTP.css">
+<link rel="stylesheet" href="SignUpSuccess.css"> -->
+<html>
+<head></head>
+<body>
+<div class="SignUpPage">
+    <div class="SignUpHead">
+        <div class="header-omail">
+          OMail
+        </div>
+        <div class="header-create">
+         Create your account
+        </div>
+      </div>
+      <div class="SignUpSteps">
+         <div class="Details-01">
+           <img src="assets/01.svg" alt="">
+           <span> Enter Details</span>
+          </div>
+          <div class="lines">
+            <img src="assets/Line 7.svg"> 
+          </div>
+          <div class="Details-02d">
+           <img src="assets/02g.svg" alt="">
+           <span> OTP Verification </span>
+         </div>
+         <div class="lines">
+           <img src="assets/Line 7.svg"> 
+         </div>
+         <div class="Details-03">
+           <img src="assets/03.svg" alt="">
+           <span> Successfull</span>
+         </div>
+      </div>
+    <!-- <div class="SignUpHead">
+       <div> Omail</div>
+       <div> Create your account </div>
+    </div>
+    <div class="SignUpSteps">Enter Details-------OTP Verification-------OTP Verification</div> -->
+    <div id="SignUpMainArea">
+        <div id="EnterUserDetails_section">
+            <div class ="UserDetailBox" id="SignUp-UserEmail">
+                <div class ="UserDetailText">Email</div>
+                <div style="border: 1px solid rgb(235,234,233);">
+                <div ><input class ="UserDetailText" id="signup_email_input" type="email" readonly autocomplete="off"> </div>
+               
+                </div>
+            </div>
+            <div class ="UserDetailBox" id="SignUp-UserPassword">
+                <div class ="UserDetailText">Password</div>
+                <div style="border: 1px solid rgb(235,234,233);">
+                    <div style="display: flex;"><input class="UserDetailText" id="signup_password_input"  type="password"><div class="Eyes"><img class="eye_svg" src="assets/Eye.svg"></div></div>
+                </div>
+            </div>
+            <div class="sign-up-field-msg"> 
+              <!-- Minimum 8 characters, 1 number, uppercase, lowercase, & special charcater -->
+            </div> 
+            <div class ="UserDetailBox" id="SignUp-ConfirmUserPassword">
+                <div class ="UserDetailText">Confirm Password</div>
+                <div style="border: 1px solid rgb(235,234,233);">
+                <div style="display: flex;"><input class ="UserDetailText" id="signup_confirmpassword_input" type="password" autocomplete="off"><div class="Eyes"><img class="eye_svg1" src="assets/Eye.svg"></div></div>
+                </div>
+            </div>
+            <div id="confrim-pass-match" class="sign-up-field-msg"> 
+            </div> 
+            </div>
+        <div id="checkBox_section">
+           <input type="checkbox" id="confirm_user_noted" autocomplete="off"><a>Have you noted your password somewhere safe?</a> 
+        </div>
+
+        <div id="proceed_section" class="ms-Button-label">
+            <div id="SignUpProceedButton">
+            <div id="SignUpProceed">Proceed</div>
+        </div>
+        </div>
+        <div id="PoweredBy"><img src="assets/Powered By.svg"></div>
+
+</div>
+</div>
+<script src="SignUpDetails.js" type="text/javascript"></script> 
+<script src="SignUpOTP.js" type="text/javascript"></script> 
+<script src="SignUpSuccess.js" type="text/javascript"></script> 
+</body>
+</html>

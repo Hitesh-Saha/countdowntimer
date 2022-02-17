@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+                 <meta charset="UTF-8">
+                 <meta http-equiv="X-UA-Compatible" content="IE=edge">
+                 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+                 <link rel="stylesheet" href="Passphrase-Screen.css">
+                 <link href='https://fonts.googleapis.com/css?family=Poppins' rel='stylesheet'>
+                 <script type="text/javascript" src="https://appsforoffice.microsoft.com/lib/1.1/hosted/office.js"></script>
+                 <title>Passphrase</title>
+</head>
+<body>
+      <div class="pass-view" id="pass_v">
+       <div class="passphrase-main-section">
+           <div class="passphrase-title">
+            View Passphrase           
+           </div>
+           <div class="pass-subject-time">
+                 <div class="pass-view-subject">
+                  Subject:
+                  </div>
+                  <div class="pass-view-subject-value">
+                        Loading..
+                  </div>
+                 <div class="date">
+                 <div class="pass-view-time">
+                       Loading..
+                 </div>
+                 </div>
+          </div>
+          <div class="pass-view-rec-recValue">
+          <div class="pass-view-recepient">
+            Recipient:
+           </div>
+            <div class="pass-view-recepient-result">
+                  Loading..
+            </div>
+           </div>
+           </div>   
+           <div class="input-section">
+           <input class="passphrase-input" readonly>
+           </input>
+           <div class="passphrase-copy">
+                 <img src="./assets/Vectorcopy.svg" alt="">
+           </div>
+           <div class="passphrase-copy-text">
+                 Copy
+           </div>
+           </div>
+           <div class="passphrase-content">
+            This passphrase will help the recipient to open your private email.
+            Please share it with them seperately           
+          </div>
+           <div class="passphrase-btn" role="button" id="passphrase-btn-ok" class="ms-Button-label">
+                <span>OK</span>       
+           </div>
+      </div>
+       <script src="./Passphrase-Screen.js"></script>       
+</body>
+</html>

@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- <h1 class="model-title">OMail</h1> -->
+    <title class="model-title">Login</title>
+    <link rel="stylesheet" href="login.css">
+    <link rel="stylesheet" href="SignUpDetails.css">
+    <link href='https://fonts.googleapis.com/css?family=Poppins' rel='stylesheet'>
+
+    <!-- Office JavaScript API -->
+    <script type="text/javascript" src="https://appsforoffice.microsoft.com/lib/1.1/hosted/office.js"></script>
+  </head>
+<body>
+  
+  <div class="container">
+    <div class="model-body">
+      OMail
+    </div>
+
+    <div class="img">
+      <img src="./assets/Omail-page.png" alt="signup">
+    </div>
+
+    <div class="model-para">OMail guarantees your email privacy from all third parties,including</div>
+  
+    <div class="login-form">
+      <div class="form-body">
+        <label for="uname"><b>E-mail</b></label>
+        <input type="text" placeholder="Enter E-Mail" name="uname" id="name" required>
+        <div class ="UserDetailBox" id="SignUp-ConfirmUserPassword">
+          <div class ="UserDetailText">Confirm Password</div>
+          <div style="border: 1px solid rgb(235,234,233);">
+          <div style="display: flex;"><input class ="UserDetailText" id="signup_confirmpassword_input" type="password"><div><img class="eye_svg" src="assets/Eye.svg"></div></div>
+          </div>
+      </div>
+        <!-- <label for="psw"><b>Password</b></label>
+        <input type="password" placeholder="Enter Password" name="psw" id="password" class="password" required>
+        <div><img class="eye_svg" src="assets/Eye.svg"></div> -->
+      </div>
+
+      <div class="model-forgot">Forgot Password</div>
+      <button type="submit" id="checkUser">Login</button>
+    </div>
+  </div> 
+  <script src="./login.js"></script>
+</body>
+</html>

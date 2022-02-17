@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+        
+    <!-- Graph SDK -->
+    <script src="https://cdn.jsdelivr.net/npm/@microsoft/microsoft-graph-client/lib/graph-js-sdk.js"></script>
+    <!-- polyfilling promise -->
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/es6-promise/dist/es6-promise.auto.min.js"></script>
+    <!-- polyfilling fetch -->
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/whatwg-fetch/dist/fetch.umd.min.js"></script>
+    <!-- depending on your browser you might wanna include babel polyfill -->
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@babel/polyfill@7.4.4/dist/polyfill.min.js"></script>
+
+    <!-- Office JavaScript API -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    <script type="text/javascript" src="https://appsforoffice.microsoft.com/lib/1.1/hosted/office.js"></script>
+   
+    <!-- For more information on Fluent UI, visit https://developer.microsoft.com/fluentui. -->
+    <link rel="stylesheet"
+        href="https://static2.sharepointonline.com/files/fabric/office-ui-fabric-core/9.6.1/css/fabric.min.css" />
+
+    <!-- <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous"> -->
+    <title>OMail</title>
+    <link rel="stylesheet"
+        href=" https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/monokai-sublime.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.7.1/katex.min.css">
+    <link rel="stylesheet" href="https://cdn.quilljs.com/1.3.6/quill.bubble.css">
+    <link rel="stylesheet" href=" https://cdn.quilljs.com/1.3.6/quill.snow.css">
+    <link rel="stylesheet" href="https://cdn.quilljs.com/1.3.6/quill.core.css">
+    <link rel="stylesheet" href="rec-window.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.2/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.7.1/katex.min.js"></script>
+    <script src="https://cdn.quilljs.com/1.3.6/quill.js"></script>
+    <!-- <script src="https://unpkg.com/@material-ui/core@latest/umd/material-ui.development.js" crossorigin="anonymous"></script> -->
+    <script src="https://unpkg.com/babel-standalone@latest/babel.min.js" crossorigin="anonymous"></script>
+    <!-- Fonts to support Material Design -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap" />
+    <!-- Icons to support Material Design -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/semantic-ui@2.4.2/dist/semantic.min.css"> <!-- for dropdown -->
+    <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script> -->
+    <script src="https://cdn.jsdelivr.net/npm/semantic-ui@2.4.2/dist/semantic.min.js"></script> <!--dropdown -->
+    <!---Emoji library-->
+    <!-- <link href="https://cdn.quilljs.com/1.3.5/quill.snow.css" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="/src/emoji-dist/quill-emoji.css">
+    <script src="https://cdn.quilljs.com/1.3.5/quill.js"></script>
+    <script src="/src/emoji-dist/quill-emoji.js"></script> -->
+
+
+   
+    
+</head>
+
+<body >
+    <div id="reciver_window">
+        <div class="title-subject">
+            Subject
+        </div>
+    <div id="from-and-buttons">
+        <div id="name-intitals">
+            <div id="intitals" style="display: flex;">Z</div>
+        </div>
+
+        <div id="from-and-date">
+            <div id="from-address">
+            <div id="from-name"> <b>Loading..</b> </div>
+           <div id="from-email"></div>
+            </div>
+            <div id="date-data">
+                <div id="date-time-value"> <b>Loading....</b> </div>
+            </div>
+        </div>
+    <div id="reply-icons" >
+            <div class="replybuttons" id="reply_svg" title="Reply"><img src="./assets/reply.svg" alt=""></div>
+            <div class="replybuttons" id="reply_all_svg" title="ReplyAll"><img src="./assets/replyall.svg" alt=""></div>
+            <div class="replybuttons" id="forward_svg" title="Forward"><img src="./assets/forward.svg" alt=""></div>
+    </div>
+    </div>
+    <div id="to-cc-bcc">
+       <div id="to-address">To : &nbsp<div id="to-value"> <b>Loading....</b></div></div>
+       <div id="cc-address">Cc :  &nbsp<div id="cc-value"> <b>Loading....</b></div></div>
+    </div>
+    <div class=attachment-tab>
+     
+    </div>
+    <div id="mail-display-area">
+
+        <b>Loading....</b>
+            <!-- Hi Team,<br>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras dictum porta massa, sed tristique nisi malesuada et. Proinlacus tellus, auctor at pretium in, tincidunt sit amet orci. Integer diam sem, suscipit ut ipsum a, faucibus dictum erat. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Donec varius vestibulum velit sed tempus. Maecenas a consequat odio. Cras eu diam eget lorem varius eleifend vitae eu nisl. Nam blandit nibh nisl, vitae aliquet nisl interdum non. Nulla molestie arcu sit amet elit bibendum, a sodales neque dignissim. Morbi metus massa, varius 
+            a velit vitae, molestie dictum lorem. Ut auctor urna a lorem egestas, tempor congue nisl tempor. Nunc dictum, ipsum non tristique bibendum, est massa pellentesque arcu, non accumsan turpis sapien at arcu. Donec et massa vitae urna pretium sollicitudin at at erat.
+            <br>
+            Cras feugiat facilisis libero vel tristique. Ut at rhoncus magna. Donec aliquam luctus gravida. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Cras venenatis mollis ex dignissim maximus. Vivamus quis pharetra augue. Vivamus rhoncus interdum sollicitudin. Pellentesque at vulputate nisl, ac commodo ex. Nunc eget risus quis est feugiat 
+            accumsan a fermentum risus. Praesent malesuada pulvinar posuere. Proin lectus lectus, interdum rutrum tortor porta, cursus porta neque.
+            <br>
+            Best Regards<br>
+            Lorem Ipsum -->
+    </div>
+    <div id="reply-buttons-tab">
+        <div id="reply-button"><b>Reply</b></div>
+        <div>|</div>
+        <div id="reply-all-button"><b>Reply All</b></div>
+        <div>|</div>
+        <div id="forward-button"><b>Forward</b></div>
+    </div>
+    </div>
+  
+
+    <script src="rec-window.js"></script>
+    <!-- <script src="../settings/attachment.js"></script> -->
+    <!-- <script src="./sendAction.js"></script> -->
+    <!-- <script src="./debouncer.js"></script> -->
+    <!-- <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-ygbV9kiqUc6oa4msXn9868pTtWMgiQaeYH7/t7LECLbyPA2x65Kgf80OJFdroafW" crossorigin="anonymous">
+        </script> -->
+</body>
+</html>
