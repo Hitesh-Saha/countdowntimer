@@ -12,13 +12,14 @@ pool:
 jobs:
   - job: InitialJob
     steps:
-    - bash: ls -r $(Build.ArtifactStagingDirectory)
+    - bash: ls -R $(Build.ArtifactStagingDirectory)
       displayName: 'Run a one-line script'
     - script: |
         echo Add other tasks to build, test, and deploy your project.
         echo See https://aka.ms/yaml
       displayName: 'Run a multi-line script'
   - job: BuildArtifactJob
+    dependsOn: InitialJob
     steps:
       - task: PublishBuildArtifacts@1
         inputs:
