@@ -12,8 +12,6 @@ pool:
 jobs:
   - job: InitialJob
     steps:
-    - bash: ls -R $(Build.ArtifactStagingDirectory)
-      displayName: 'Run a one-line script'
     - script: |
         echo Add other tasks to build, test, and deploy your project.
         echo See https://aka.ms/yaml
@@ -21,6 +19,8 @@ jobs:
   - job: BuildArtifactJob
     dependsOn: InitialJob
     steps:
+      - bash: echo $(System.DefaultWorkingDirectory}
+      - bash: ls $(System.DefaultWorkingDirectory}
       - task: CopyFiles@2
         inputs:
           SourceFolder: '$(System.DefaultWorkingDirectory}'
