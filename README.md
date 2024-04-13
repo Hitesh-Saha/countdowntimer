@@ -20,7 +20,7 @@ Check out the live demo [here](https://hitesh-saha.github.io/countdowntimer/).
 1. Clone the repository:
 
 ```
-git clone https://github.com/your-username/countdown-timer.git
+git clone https://github.com/Hitesh-Saha/countdowntimer.git
 ```
 
 2. Open the index.html file in your web browser.
